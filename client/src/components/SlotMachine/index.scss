@@ -1,0 +1,59 @@
+.slot-machine {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: Arial, sans-serif;
+
+  .reels {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    height: 150px;
+  }
+
+  .reel {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #000;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+
+    &.spinning .symbol {
+      animation: spin 2s infinite;
+    }
+
+    .symbol {
+      width: 50px; /* İkonun boyutu */
+      height: 50px; /* İkonun boyutu */
+      object-fit: contain; /* İkonun içeriği muhafaza edilecek */
+      display: block;
+      margin: auto;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .coins {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}

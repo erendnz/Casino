@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // Adding Prettier
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "semi": ["error", "always"], // Enforcing semicolons
+    "quotes": ["error", "single"], // Enforcing single quotes
+    "no-unused-vars": "warn", // Warning on unused variables
+    "react/prop-types": "off", // Disabling prop-types rule for React
+    "prettier/prettier": "error" // Showing Prettier errors in ESLint
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

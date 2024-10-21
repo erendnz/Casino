@@ -1,0 +1,31 @@
+.provider-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+
+    &.active {
+      background: #0056b3;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: #0056b3;
+      color: #ffffff;
+    }
+  }
+}

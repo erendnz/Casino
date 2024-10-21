@@ -1,0 +1,43 @@
+.game-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: calc(100% / 6 - 20px); /* Her satırda 6 oyun olacak şekilde genişlik */
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .game-item-image {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .game-item-title {
+    padding: 10px;
+    text-align: center;
+
+    h2 {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0;
+    }
+  }
+}
