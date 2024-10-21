@@ -1,7 +1,7 @@
 .main-layout {
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
+  min-height: 100vh;
 
   .main-header {
     position: sticky;
@@ -9,27 +9,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1b1b1b;
+    background: #1b1b1b; 
     color: #fff;
-    padding: 10px 10px;
+    padding: 5px 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 
     .logo {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: bold;
-      margin-left: 10px;
+      margin-left: 20px;
     }
 
     .coins {
+      margin-right: 20px;
       font-size: 1.2rem;
-      margin-right: 10px;
     }
   }
 
   .main-content {
     flex: 1;
     padding: 0px;
-    background-color: #1b1b1b;
+    background-color: #343a40; /* Ana içerik arka plan rengi */
   }
 }

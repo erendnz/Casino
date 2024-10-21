@@ -11,7 +11,7 @@
   }
 
   .reel {
-    width: 100px;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     border: 2px solid #000;
@@ -22,25 +22,21 @@
     background: #fff;
 
     &.spinning .symbol {
-      animation: spin 2s infinite;
+      animation: spin 0.5s;
     }
 
     .symbol {
-      width: 50px; /* İkonun boyutu */
-      height: 50px; /* İkonun boyutu */
-      object-fit: contain; /* İkonun içeriği muhafaza edilecek */
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain;
       display: block;
       margin: auto;
     }
   }
 
   @keyframes spin {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100%);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
   }
 
   button {
@@ -49,11 +45,11 @@
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .coins {
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }

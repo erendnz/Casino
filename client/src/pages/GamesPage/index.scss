@@ -1,15 +1,20 @@
 .sticky-icon {
   position: fixed;
-  top: 300px;
+  top: 100px;
   right: 20px;
-  background: #28a745;
+  background: none;
   color: #fff;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 2.5rem;
   z-index: 1000;
+
+  img {
+    width: 75px;
+    height: 75px;
+    display: block; 
+    border-radius: 50%; 
+  }
 }
 
 .slot-machine-overlay {
@@ -27,7 +32,7 @@
 
 .slot-machine-container {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 90%;
