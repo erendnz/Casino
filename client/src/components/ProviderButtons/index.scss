@@ -6,12 +6,12 @@
   button {
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
-    background: #007bff;
-    color: #fff;
+    background: #fff;
+    color: #272b34;
     border: none;
     cursor: pointer;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: capitalize;
     transition:
@@ -19,12 +19,12 @@
       color 0.3s ease;
 
     &.active {
-      background: #0056b3;
-      color: #ffffff;
+      background: #272b34;
+      color: #fff;
     }
 
     &:hover {
-      background: #0056b3;
+      background: rgb(255, 152, 0);
       color: #ffffff;
     }
   }

@@ -5,8 +5,8 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: calc(100% / 6 - 20px); /* Her satırda 6 oyun olacak şekilde genişlik */
+  margin: 5px;
+  width: calc(100% / 6 - 20px); 
   box-sizing: border-box;
   transition: transform 0.3s ease;
 
@@ -31,11 +31,11 @@
   }
 
   .game-item-title {
-    padding: 10px;
+    padding: 2px;
     text-align: center;
 
     h2 {
-      font-size: 1.1rem;
+      font-size: 0.8rem;
       color: #333;
       margin: 0;
     }
