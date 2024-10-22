@@ -28,6 +28,11 @@ export function spinSlotMachine(): { result: string[], coins: number } {
   return { result, coins };
 }
 
+export function resetCoinBalance(): { coins: number } {
+  coins = 20;
+  return { coins };
+}
+
 // Function to get the current coin balance
 export function getCoinBalance(): number {
   return coins;

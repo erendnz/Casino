@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { fetchCoins, fetchCoinsInitial } from '../../services/api';
+import React, { useEffect, useContext } from 'react';
+import { resetCoins } from '../../services/api';
+import { CoinContext } from '../../contexts/CoinContext';
 import './index.scss';
 
 const MainLayout = ({ children }) => {
-  const [coins, setCoins] = useState(null);
+  const { coins, setCoins } = useContext(CoinContext);
 
   // Gets initial coin balance
   useEffect(() => {
-    const getInitialCoins = async () => {
+    const resetCoinBalance = async () => {
       try {
-        const data = await fetchCoinsInitial();
+        const data = await resetCoins();
         setCoins(data.coins);
       } catch (error) {
         console.error('Error fetching initial coins:', error);
       }
     };
 
-    getInitialCoins();
+    resetCoinBalance();
   }, []);
 
   return (

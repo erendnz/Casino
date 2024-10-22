@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { spinSlotMachine, getCoinBalance } from '../services/slotMachineService';
+import { spinSlotMachine, getCoinBalance, resetCoinBalance } from '../services/slotMachineService';
 
 // Controller function to handle the spin request
 export function spin(req: Request, res: Response): void {
@@ -25,10 +25,10 @@ export function getCoins(req: Request, res: Response): void {
   }
 }
 
-// Controller function to get the initial coin balance
-export function getCoinsInitial(req: Request, res: Response): void {
+// Controller function to reset initial coin balance
+export function resetCoins(req: Request, res: Response): void {
   try {
-    const coins = 20;
+    const { coins } = resetCoinBalance();
     res.json({ coins });
   } catch (error) {
     res.status(400).send('Unable to fetch coins.');

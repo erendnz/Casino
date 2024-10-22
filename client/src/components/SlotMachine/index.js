@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { fetchCoins } from '../../services/api';
+import { CoinContext } from '../../contexts/CoinContext';
 import './index.scss';
 
 // Icon mapping for slot machine symbols
@@ -12,7 +13,7 @@ const iconMap = {
 
 const SlotMachine = ({ spin }) => {
   const [result, setResult] = useState(['lemon', 'lemon', 'lemon']); // Initial result state
-  const [coins, setCoins] = useState(null); // Initial coin balance state
+  const { coins, setCoins } = useContext(CoinContext); // get coin from context
   const [spinning, setSpinning] = useState(false);
 
   // Function to handle the spin action
@@ -26,16 +27,16 @@ const SlotMachine = ({ spin }) => {
 
   // Get initial coin balance
   useEffect(() => {
-    const getInitialCoins = async () => {
+    const getCoins = async () => {
       try {
         const data = await fetchCoins();
         setCoins(data.coins);
       } catch (error) {
-        console.error('Error fetching initial coins:', error);
+        console.error('Error fetching coins:', error);
       }
     };
 
-    getInitialCoins();
+    getCoins();
   }, []);
 
   return (

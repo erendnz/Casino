@@ -8,7 +8,7 @@ describe('SearchBar', () => {
     const mockOnSearchChange = jest.fn();
 
     render(<SearchBar searchTerm="" onSearchChange={mockOnSearchChange} />);
-    
+
     const inputElement = screen.getByPlaceholderText(/Search games.../i);
 
     // Simulating a change event on the input element

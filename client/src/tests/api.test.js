@@ -18,7 +18,7 @@ describe('API Service', () => {
     // Mocking the fetch response for fetchCoins
     fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => ({ coins: 20 })
+      json: async () => ({ coins: 20 }),
     });
 
     // Calling fetchCoins and checking the response
@@ -49,7 +49,7 @@ describe('API Service', () => {
     // Mocking the fetch response for spin
     fetch.mockResolvedValueOnce({
       ok: true,
-      json: async () => ({ result: ['apple', 'lemon', 'apple'], coins: 19 })
+      json: async () => ({ result: ['apple', 'lemon', 'apple'], coins: 19 }),
     });
 
     // Calling spin and checking the response

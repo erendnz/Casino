@@ -40,10 +40,10 @@ export const spin = async () => {
   }
 };
 
-export const fetchCoinsInitial = async () => {
+export const resetCoins = async () => {
   try {
-    const response = await fetch('/api/initialCoins', {
-      method: 'GET',
+    const response = await fetch('/api/resetCoins', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -55,7 +55,7 @@ export const fetchCoinsInitial = async () => {
 
     return response.json();
   } catch (error) {
-    console.error('Error fetching coins:', error);
+    console.error('Error reset coins:', error);
     throw error;
   }
 };

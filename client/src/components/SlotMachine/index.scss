@@ -26,8 +26,8 @@
     }
 
     .symbol {
-      width: 100%; 
-      height: 100%; 
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       display: block;
       margin: auto;
@@ -35,8 +35,12 @@
   }
 
   @keyframes spin {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
   }
 
   button {
