@@ -2,7 +2,10 @@
   "name": "casino-project",
   "version": "1.0.0",
   "scripts": {
-    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build",
-    "start": "cd server && npm start"
+    "heroku-postbuild": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
