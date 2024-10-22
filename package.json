@@ -6,7 +6,7 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm --prefix server start",
     "client": "npm --prefix client start",
-    "heroku-postbuild": "npm install --prefix server && npm install --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server"
   },
   "dependencies": {
     "concurrently": "^6.4.0"
