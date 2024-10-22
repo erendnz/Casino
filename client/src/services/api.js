@@ -39,3 +39,23 @@ export const spin = async () => {
     throw error;
   }
 };
+
+export const fetchCoinsInitial = async () => {
+  try {
+    const response = await fetch('/api/initialCoins', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Error fetching coins:', error);
+    throw error;
+  }
+};

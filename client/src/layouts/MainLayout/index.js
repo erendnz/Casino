@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchCoins } from '../../services/api';
+import { fetchCoins, fetchCoinsInitial } from '../../services/api';
 import './index.scss';
 
 const MainLayout = ({ children }) => {
@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
   useEffect(() => {
     const getInitialCoins = async () => {
       try {
-        const data = await fetchCoins();
+        const data = await fetchCoinsInitial();
         setCoins(data.coins);
       } catch (error) {
         console.error('Error fetching initial coins:', error);
