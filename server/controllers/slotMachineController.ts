@@ -24,3 +24,13 @@ export function getCoins(req: Request, res: Response): void {
     res.status(400).send('Unable to fetch coins.');
   }
 }
+
+// Controller function to get the initial coin balance
+export function getCoinsInitial(req: Request, res: Response): void {
+  try {
+    const coins = 20;
+    res.json({ coins });
+  } catch (error) {
+    res.status(400).send('Unable to fetch coins.');
+  }
+}
