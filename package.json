@@ -5,9 +5,10 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm --prefix server start",
-    "client": "npm --prefix client start"
+    "client": "npm --prefix client start",
+    "heroku-postbuild": "npm install --prefix server && npm install --prefix client"
   },
   "dependencies": {
-    "concurrently": "^6.5.1"
+    "concurrently": "^6.4.0"
   }
 }
