@@ -3,6 +3,9 @@
 
 This online casino project is a web application with a React frontend (client) and a Node.js backend (server) using TypeScript. The project is designed to run locally on `localhost:3001` and can be deployed to Heroku.
 
+Project can be found in this address
+https://onlinecasinoapp-ef52a50422d0.herokuapp.com/
+
 ### Prerequisites
 
 - **Node.js** (v14.x or above)
