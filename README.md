@@ -17,7 +17,6 @@ This online casino project is a web application with a React frontend (client) a
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd my-app
 ```
 
 ### Install Dependencies
